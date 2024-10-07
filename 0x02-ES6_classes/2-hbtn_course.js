@@ -1,17 +1,29 @@
+/**
+ * Represents a Holberton Course.
+ */
 export default class HolbertonCourse {
+  /**
+   * Creates a new @see {@link HolbertonCourse}.
+   *
+   * @param {String} name - The name of the course.
+   * @param {Number} length - How long the course is (in months).
+   * @param {String[]} students - The names of students in the course.
+   */
   constructor(name, length, students) {
     this.name = name;
     this.length = length;
     this.students = students;
   }
+
   /**
-   * get the name of the course
+   * Gets the name of this course.
    */
   get name() {
     return this._name;
   }
+
   /**
-   * set the name of the course
+   * Sets the name of this course.
    */
   set name(value) {
     if (typeof value !== "string") {
@@ -19,29 +31,33 @@ export default class HolbertonCourse {
     }
     this._name = value;
   }
+
   /**
-   * get the length of the course
+   * Gets the length of this course (in months).
    */
   get length() {
     return this._length;
   }
+
   /**
-   * set the length of the course
+   * Sets the length of this course (in months).
    */
   set length(value) {
-    if (typeof value !== "Number") {
-      throw new TypeError("length must be a Number");
+    if (typeof value !== "number") {
+      throw new TypeError("Length must be a number");
     }
     this._length = value;
   }
+
   /**
-   * get the students of the course
+   * Gets the names of students in this course.
    */
   get students() {
     return this._students;
   }
+
   /**
-   * set the students of the course
+   * Sets the names of students in this course.
    */
   set students(value) {
     if (!(value instanceof Array)) {

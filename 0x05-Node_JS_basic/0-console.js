@@ -1,10 +1,10 @@
 /**
- * Displays a massage on the STDOUT
- * @params {string} msg to be displayed
- * 
+ * Displays a message on the STDOUT.
+ * @param {String} msg The message to display.
+ * @author Bezaleel Olakunori <https://github.com/B3zaleel>
  */
-function displayMessage(...params) {
-	console.log(...params)
+const displayMessage = (msg) => {
+  console.log(msg);
 };
 
 module.exports = displayMessage;
